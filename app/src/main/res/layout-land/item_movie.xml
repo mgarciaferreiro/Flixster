@@ -25,8 +25,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@id/ivBackdropImage"
-        android:text="Movie Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:typeface="serif"
+        android:shadowColor="#C2C2C2"
+        android:shadowRadius="5"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:text="Movie Title" />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -36,5 +42,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@id/tvTitle"
         android:layout_toRightOf="@id/ivBackdropImage"
+        android:textColor="#C2C2C2"
+        android:typeface="serif"
         android:text="Overview" />
 </RelativeLayout>
