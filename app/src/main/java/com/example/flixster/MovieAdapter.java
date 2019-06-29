@@ -54,7 +54,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         Movie movie = movies.get(i);
 
         // determine current orientation
-
         boolean isPortrait = context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
 
         String imageUrl = null;
@@ -108,8 +107,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             int position = getAdapterPosition();
             if (position != RecyclerView.NO_POSITION) {
                 Movie movie = movies.get(position);
+                String backdropImageUrl = config.getImageUrl(config.getPosterSize(), movie.getBackdropPath());
                 Intent intent = new Intent(context, MovieDetailsActivity.class);
                 intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
+                intent.putExtra("backdropImageUrl", Parcels.wrap(backdropImageUrl));
                 context.startActivity(intent);
             }
         }

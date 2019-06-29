@@ -12,6 +12,7 @@ public class Movie {
     String backdropPath;
     Double voteAverage;
     String releaseDate;
+    Integer id;
 
     public Movie() {}
 
@@ -22,6 +23,7 @@ public class Movie {
         backdropPath = object.getString("backdrop_path");
         voteAverage = object.getDouble("vote_average");
         releaseDate = object.getString("release_date");
+        id = object.getInt("id");
     }
 
     public String getBackdropPath() { return backdropPath; }
@@ -41,4 +43,6 @@ public class Movie {
     public Double getVoteAverage() { return voteAverage; }
 
     public String getReleaseDate() { return releaseDate; }
+
+    public Integer getId() { return id; }
 }

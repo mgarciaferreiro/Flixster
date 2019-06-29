@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     // get list of currently playing movies from API
 
-    private  void getNowPlaying() {
+    private void getNowPlaying() {
         String url = API_BASE_URL + "/movie/now_playing";
         RequestParams params = new RequestParams();
         params.put(API_KEY_PARAM, getString(R.string.api_key));
