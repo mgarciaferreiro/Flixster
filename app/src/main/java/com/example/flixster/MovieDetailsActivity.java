@@ -50,7 +50,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         trailerPlaceholder = (ImageView) findViewById(R.id.trailerPlaceholder);
 
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
-        String imageUrl = (String) Parcels.unwrap(getIntent().getParcelableExtra("backdropImageUrl"));
+        String imageUrl = (String) getIntent().getStringExtra("backdropImageUrl");
         Log.d("MovieDetailsActivity", String.format("Showing details for %s", movie.getTitle()));
 
         tvTitle.setText(movie.getTitle());
